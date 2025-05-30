@@ -1,17 +1,41 @@
 body {
-  font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  font-family: 'arial', Helvetica, sans-serif;
+  background-color: #ffffff; 
   margin: 0;
   padding: 0;
+  color: #111; 
 }
 
 h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
-  font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
+h5{
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  color: #222; 
+}
+
+h1{
+  font-size: 4.209rem;
+  text-align: center;
+  text-shadow: 1px 3px 3px rgba(0,0,0, 0.6);
+  color: rgb(52, 52, 113);
+}
+
+h2{
+  font-size: 3.157rem;
+  margin-bottom: 0;
+}
+
+
+h3{
+  font-size: 2.369rem;
+  margin-bottom: 0;
+}
+
+p, address, form, footer, ul{
+  font-size: 1.125rem;
+  margin-top: 1rem;
 }
 
 .container {
@@ -22,6 +46,8 @@ h6 {
 
 img {
   width: 100%;
+  height: auto;
+  display: block;
 }
 
 .main-nav ul {
@@ -30,6 +56,7 @@ img {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  background-color: #222; /* Added background for nav */
 }
 
 .main-nav ul li {
@@ -39,9 +66,16 @@ img {
 
 .main-nav ul li a {
   display: block;
-  color: inherit;
+  color: #fff; 
   text-decoration: none;
   font-size: 1.25rem;
+  padding: 1rem;
+}
+
+.main-nav ul li a:focus, .main-nav ul li a:hover {
+  background-color: #bfbcbc; /*Add focus and hover styles for accessibility*/
+  outline: 2px solid #000000; 
+  color: #000;
 }
 
 form input,
@@ -50,6 +84,8 @@ form textarea {
   width: 100%;
   margin-bottom: 1rem;
   padding: .5rem 1rem;
+  border: 1px solid #ccc;
+  font-size: 1.125rem;
 }
 
 form textarea {
@@ -60,12 +96,44 @@ form textarea {
 }
 
 form button {
-  background: none;
+  background-color: #000;
+  color: #fff;
   border: 2px solid black;
   padding: 1rem;
   text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+  border-radius: 0.25rem;
+  box-shadow: 1px 2px 3px rgba(0,0,0, 0.6);
+}
+
+form button:focus,
+form button:hover {
+  background-color: #333;
+  outline: 2px solid #fff;
+  box-shadow: none;
 }
 
 .site-footer {
   padding: 2rem 0;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px dashed #fff;
 }

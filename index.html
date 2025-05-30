@@ -13,10 +13,13 @@
 </head>
 
 <body>
+  <!-- Skip Link for keyboard user -->
+  <a href="#main-content" class="skip-link">Skip to the main content</a>
+
   <div class="container">
-    <div class="site-header">
+    <header class="site-header" role="banner">
       <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+      <div class="main-nav" role="navigation" aria-label="Main navigation">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
@@ -24,44 +27,57 @@
           <li><a href="#">Studio</a></li>
         </ul>
       </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
-    <div class="main-content">
-      <h1>Welcome to Jam Box</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h1>Meet the owner</h1>
+      <img src="https://placekitten.com/1200/900" class="banner" alt="Jam Box Studios music themed banner">
+    </header>
+
+    <main id="main-content" role="Main">
+      <section aria-labelledby="welcome">
+        <h2 id="welcome">Welcome to Jam Box</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
+      </section>
+
+      <section class="owner" aria-labelledby="owner">
+        <h2 id="owner">Meet the owner</h2>
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+          <li><strong>Name:</strong> John Doe</li>
+          <li><strong>Title:</strong> CEO</li>
+          <li><strong>Email:</strong> <a href="mailto:johnjoe@jambox.ca">johnjoe@jambox.ca</a></li>
+          <li><strong>Phone:</strong> <a href="tef:6130000000">613-000-0000</a></li>
         </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
+
+        <h3>Address</h3>
+        <address>
+          Jambox Studios<br>
+          123 Guitar Road,<br>
+          Musicville, Danceistan<br>
           B3T 0L0
-        </p>
-      </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
+        </address>
+      </section>
+
+      <section class="contact-section" aria-labelledby="contact">
+        <h2 id="contact">Contact Us</h2>
         <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
+          <label for="fullname">Full Name</label>
+          <input id="fullname" name="fullname" type="text" placeholder="Full Name">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" placeholder="Email">
+
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="Subject">
+          
+          <label for="message"><b>Your Message</b></label>
+          <textarea id="message" name="message"></textarea>
+
           <button type="submit">Send</button>
         </form>
-      </div>
-    </div>
-    <div class="site-footer">
+      </section>
+    </main>
+
+    <footer class="site-footer">
       &copy; 2021 Jam Box Studios
-    </div>
+    </footer>
   </div>
 </body>
 
